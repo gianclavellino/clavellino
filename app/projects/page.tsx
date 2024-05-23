@@ -1,31 +1,34 @@
 "use client";
-import { Github, Mail, Twitter } from "lucide-react";
+import { Github, Mail } from "lucide-react";
 import Link from "next/link";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
-import { X } from "../components/x";
+import {Unfailed} from "../components/unfailed"
+import {Botai} from "../components/botai"
+import {Empty} from "../components/empty"
+
 const socials = [
 	{
-		icon: <X/>,
-		href: "https://twitter.com/gianclavellino",
-		label: "X",
-		handle: "@gianclavellino",
+		icon: <Unfailed/>,
+		href: "/",
+		label: "NFT minter dApp | ethereum",
+		handle: "unfailed.yxz",
 	},
 	{
-		icon: <Mail size={20} />,
-		href: "mailto:info@clavellino.it",
-		label: "email",
-		handle: "info@clavellino.it",
+		icon: <Botai  />,
+		href: "/",
+		label: "AI assistant | GPT4 API",
+		handle: "business bot",
 	},
 	{
-		icon: <Github size={20} />,
-		href: "https://github.com/gianclavellino",
-		label: "github",
-		handle: "gianclavellino",
+		icon: <Empty  />,
+		href: "/",
+		label: "empty",
+		handle: "empty",
 	},
 ];
 
-export default function Example() {
+export default function Projects() {
 	return (
 		<div className=" bg-gradient-to-tl from-zinc-900/0 via-zinc-900 to-zinc-900/0">
 			<Navigation />
@@ -38,11 +41,8 @@ export default function Example() {
 								target="_blank"
 								className="p-4 relative flex flex-col items-center gap-4 duration-700 group md:gap-8 md:py-24  lg:pb-48  md:p-16"
 							>
-								<span
-									className="absolute w-px h-2/3 bg-gradient-to-b from-zinc-500 via-zinc-500/50 to-transparent"
-									aria-hidden="true"
-								/>
-								<span className="relative z-10 flex items-center justify-center w-12 h-12 text-sm duration-1000 border rounded-full text-zinc-200 group-hover:text-white group-hover:bg-zinc-900 border-zinc-500 bg-zinc-900 group-hover:border-zinc-200 drop-shadow-orange">
+								
+								<span className="flex flex-col items-center text-center items-center">
 									{s.icon}
 								</span>{" "}
 								<div className="z-10 flex flex-col items-center">
